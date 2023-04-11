@@ -1,0 +1,28 @@
+HTML {
+  max-width: 1280px;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.nav_header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_items ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero_section {
+  display: flex;
+}
