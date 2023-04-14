@@ -1,40 +1,15 @@
-import { Button } from "./App";
+import { Button } from "./Button";
+import { Logo } from "./Logo";
+import MenuItems from "./MenuItems";
 
 export function Header() {
   return (
     <header className="nav_header">
       <nav>
-        <Logo />
-        <MenuItems />
-        <Button></Button>
+        <Logo companyName="Byont" />
+        <MenuItems navLinks={["Who are we", "The problems", "Our services", "Testimonials"]} />
+        <Button btnText="Contact us"></Button>
       </nav>
     </header>
-  );
-}
-function Logo() {
-  return (
-    <div className="logo_name">
-      <h1>Byont</h1>
-    </div>
-  );
-}
-function MenuItems() {
-  return (
-    <div className="menu_items">
-      <ul>
-        <li>
-          <a href="#"> Who are we</a>
-        </li>
-        <li>
-          <a href="#"> The problems</a>
-        </li>
-        <li>
-          <a href="#"> Our services</a>
-        </li>
-        <li>
-          <a href="#"> Testimonials</a>
-        </li>
-      </ul>
-    </div>
   );
 }

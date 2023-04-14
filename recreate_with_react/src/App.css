@@ -1,7 +1,12 @@
 HTML {
-  max-width: 1280px;
   margin: 0;
   padding: 0;
+}
+:root {
+  color: white;
+}
+body {
+  margin: 0;
 }
 
 li {
@@ -13,9 +18,14 @@ a {
   text-decoration: none;
 }
 
+.hero_section {
+  background-color: #002459;
+}
+
 .nav_header nav {
   display: flex;
   justify-content: space-between;
+  background-color: #002459;
 }
 
 .menu_items ul {
@@ -23,6 +33,34 @@ a {
   gap: 1rem;
 }
 
+.heroS ection {
+  background-color: #002459;
+}
+
 .hero_section {
   display: flex;
+}
+
+.hero_section img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.sponsorlable {
+  display: flex;
+  gap: 1rem;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.explainerSection {
+  color: #002459;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
