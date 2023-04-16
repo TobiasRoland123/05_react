@@ -1,10 +1,8 @@
-import { Button } from "./Button";
-
-export function ListItem() {
+export function ListItem(props) {
   return (
     <li className="list_item">
-      some task
-      <Button btnText="Complete"></Button>
+      <h2>{props.task}</h2>
+      <button onClick={() => props.completeTask(props.id)}>Complete</button>
     </li>
   );
 }
