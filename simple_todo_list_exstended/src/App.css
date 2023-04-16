@@ -1,0 +1,31 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  background-color: darkgray;
+  padding: 3rem 1.5rem;
+  min-width: 500px;
+  margin-block-start: 3rem;
+}
+.form_input {
+  display: flex;
+  flex-direction: column;
+}
+
+.list_item {
+  display: flex;
+  flex-direction: column;
+  background: lightblue;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.list_container {
+  padding: 3rem 2rem;
+}
