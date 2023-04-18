@@ -14,7 +14,7 @@ function App() {
     setTasks((oldTasks) => oldTasks.concat(newTask));
   }
 
-  const [task, setTasks] = useState([{ task: "milk the cat", completed: false, id: 1 }]);
+  const [task, setTasks] = useState([{ task: "milk the cat", completed: false, id: uuidv4() }]);
 
   function completeTask(id) {
     setTasks((oldState) => oldState.filter((task) => task.id !== id));
