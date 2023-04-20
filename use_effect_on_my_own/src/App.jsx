@@ -4,7 +4,7 @@ import "./App.css";
 import { Header } from "./Header";
 import { ProductList } from "./ProductList";
 import { LoadMoreButton } from "./LoadMoreButton";
-import { BasketItem } from "./BasketItem";
+import { ShoppingCart } from "./ShoppingCart";
 
 const url = "https://kea-alt-del.dk/t7/api/products?start=";
 
@@ -37,34 +37,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ShoppingCart basket={basket} removeProduct={removeProduct} productCount={productCount} setProductCount={setProductCount} />
-      {articles.length === 0 ? (
-        <p>LOADING.........</p>
-      ) : (
-        <ProductList articles={articles} basket={basket} addProduct={addProduct} />
-      )}
+      <div className="product_things">
+        {articles.length === 0 ? (
+          <p>LOADING.........</p>
+        ) : (
+          <ProductList articles={articles} basket={basket} addProduct={addProduct} />
+        )}{" "}
+        <ShoppingCart basket={basket} removeProduct={removeProduct} />
+      </div>
 
       <LoadMoreButton page={page} setPage={setPage} />
     </div>
-  );
-}
-
-const [productCount, setProductCount] = useState(1);
-
-function ShoppingCart(props) {
-  return (
-    <ul className="shopping_cart">
-      <h3>Shopping cart</h3>
-
-      {props.basket.map((product) => (
-        <BasketItem
-          product={product}
-          removeProduct={props.removeProduct}
-          productCount={props.productCount}
-          setProductCount={props.setProductCount}
-        ></BasketItem>
-      ))}
-    </ul>
   );
 }
 

@@ -2,7 +2,7 @@ export function ListItem(props) {
   return (
     <>
       {props.articles.map((product) => (
-        <li key={props.id}>
+        <li key={props.id} className="list_item">
           <article>
             <img
               src={`https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`}
